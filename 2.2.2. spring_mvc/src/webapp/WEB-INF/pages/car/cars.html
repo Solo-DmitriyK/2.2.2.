@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>общий список машин</title>
+    <style>
+        table th, table td {padding: 5px;}
+    </style>
+</head>
+<body>
+<h1>List cars</h1>
+
+<table border="1">
+    <tr>
+        <th>marca</th>
+        <th>model</th>
+        <th>age</th>
+    </tr>
+
+    <tr th:each="car, state : ${car}">
+
+        <td th:utext="${car.marca}">marca</td>
+        <td th:utext="${car.model}">model</td>
+        <td th:utext="${car.age}">age</td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>
